@@ -1,0 +1,10 @@
+{
+    "commitMessage": "Bumped to %s",
+    "tagName": "v%s-src",
+    "scripts": {
+        "preupdate": "echo 'Bumping version'",
+        "precommit": "sh ./someHook.sh",
+        "postcommit": "git push && git push --tags && npm publish",
+        "postupdate": "echo 'Updated to version %s in manifest files'"
+    }
+}
