@@ -2,9 +2,9 @@ Bootstrap Advanced Dropdowns
 =============================
 
 
-[![Bower](https://img.shields.io/bower/v/bootstrap.svg)]()
-[![npm downloads](https://img.shields.io/npm/dm/localeval.svg)]()
-[![npm version](https://img.shields.io/npm/v/npm.svg)]()
+[![Bower](https://img.shields.io/bower/v/bootstrap-advanced-dropdowns.svg)]()
+[![npm downloads](https://img.shields.io/npm/dm/bootstrap-advanced-dropdowns.svg)]()
+[![npm version](https://img.shields.io/npm/v/bootstrap-advanced-dropdowns.svg)]()
 [![License](http://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat-square)](http://radic.mit-license.org)
 
 
