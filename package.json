@@ -1,0 +1,28 @@
+{
+  "name": "bootstrap-advanced-dropdown",
+  "version": "0.9.0",
+  "description": "Advanced bootstrap dropdowns, multi-level, scrollable, icons, badges. css/scss only",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin Radic",
+  "license": "MIT",
+  "devDependencies": {
+    "fs-extra": "^0.22.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-newer": "^1.1.1",
+    "grunt-sass": "^1.0.0",
+    "grunt-typescript": "radic-forks/grunt-typescript#d61682f27e2e48df236455f97f87ff216e60b3c7",
+    "jade-bootstrap": "metalshark/jade-bootstrap",
+    "load-grunt-tasks": "^3.2.0",
+    "lodash": "^3.10.0",
+    "time-grunt": "^1.2.1"
+  }
+}

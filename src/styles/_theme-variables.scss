@@ -1,0 +1,59 @@
+$base-font-weight: 300;
+
+$dropdown-box-shadow-size:                                  5px !default;
+$dropdown-wide-min-width:                                   300px !default;
+$dropdown-header-font-size:                                 13px !default;
+$dropdown-tasklist-task-font-size:                          12px !default;
+$dropdown-footer-font-size:                                 12px !default;
+
+// dropdown
+$dropdown-bg:                                               #ffffff !default;
+$dropdown-box-shadow-color:                                 rgba(#222, 0.2) !default;
+$dropdown-header-bg:                                        #e4e4e4 !default;
+$dropdown-header-font:                                      $headings-font-family !default;
+$dropdown-header-color:                                     #838383 !default;
+$dropdown-header-link-color:                                #000000 !default;
+$dropdown-header-link-color-hover:                          lighten($dropdown-header-link-color, 20) !default;
+$dropdown-item-border-color:                                transparent !default;
+$dropdown-item-bg-hover:                                    #f5f5f5 !default;
+$dropdown-item-color:                                       #888888 !default;
+$dropdown-item-color-hover:                                 $dropdown-item-color !default;
+$dropdown-item-arrow-color:                                 #cccccc !default;
+$dropdown-footer-bg:                                        #f2f0f0 !default;
+$dropdown-footer-color:                                     #888888 !default;
+$dropdown-footer-bg-hover:                                  darken($dropdown-footer-bg, 5) !default;
+$dropdown-footer-color-hover:                               $dropdown-footer-color !default;
+$dropdown-footer-border-color:                              darken($dropdown-footer-bg, 5) !default;
+
+// dropdown inverse (dark)
+$dropdown-inverse-bg:                                       #333333 !default;
+$dropdown-inverse-box-shadow-color:                         rgba(#000, 0.2) !default;
+$dropdown-inverse-header-bg:                                #454545 !default;
+$dropdown-inverse-header-color:                             #b3b3b3 !default;
+$dropdown-inverse-header-link-color:                        #000000 !default;
+$dropdown-inverse-header-link-color-hover:                  lighten($dropdown-inverse-header-link-color, 20) !default;
+$dropdown-inverse-item-border-color:                        #484848 !default;
+$dropdown-inverse-item-bg-hover:                            #222222 !default;
+$dropdown-inverse-item-color:                               #888888 !default;
+$dropdown-inverse-item-color-hover:                         $dropdown-inverse-item-color !default;
+$dropdown-inverse-item-arrow-color:                         #cccccc !default;
+$dropdown-inverse-footer-bg:                                #454545 !default;
+$dropdown-inverse-footer-bg-hover:                          lighten($dropdown-inverse-footer-bg, 5) !default;
+$dropdown-inverse-footer-color:                             #888888 !default;
+$dropdown-inverse-footer-color-hover:                       $dropdown-inverse-footer-color !default;
+$dropdown-inverse-footer-border-color:                      lighten($dropdown-inverse-footer-bg, 5) !default;
+
+// dropdown task list
+$dropdown-tasklist-task-color:                              #888888 !default;
+$dropdown-tasklist-progress-bg:                             #dfdfdf !default;
+$dropdown-tasklist-item-border-color:                       #e4e4e4 !default;
+
+$dropdown-inverse-tasklist-task-color:                      #b3b3b3 !default;
+$dropdown-inverse-tasklist-progress-bg:                     #c8c8c8 !default;
+$dropdown-inverse-tasklist-item-border-color:               #484848 !default;
+
+// dropdown notifications
+$dropdown-notifications-icon-color:                         #ffffff !default;
+$dropdown-notifications-item-border-color:                  #e4e4e4 !default;
+$dropdown-inverse-notifications-icon-color:                 #d8d1d1 !default;
+$dropdown-inverse-notifications-item-border-color:          #484848 !default;

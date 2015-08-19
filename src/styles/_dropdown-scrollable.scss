@@ -1,0 +1,19 @@
+
+ul[class^="dropdown-"].scrollable:not(.dropdown-menu),
+ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) {
+    @extend .dropdown-menu;
+    display: block;
+    //position: inherit;
+    z-index: 80;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    list-style: none;
+    border: none;
+    box-shadow: none;
+    width: 100% !important;
+
+    > li:not(.header) + li:not(.header) {
+        border-top: 1px solid transparent;
+    }
+}

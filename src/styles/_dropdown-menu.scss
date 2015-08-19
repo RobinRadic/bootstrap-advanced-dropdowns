@@ -1,0 +1,135 @@
+
+.dropdown-menu {
+    padding: 0;
+
+    &:before {
+        border-left: none;
+        border-right: none;
+    }
+
+    small {
+        font-size: 10px;
+        float: right;
+        line-height: 20px;
+        display: block;
+    }
+
+    li:not(.header) + li:not(.header) {
+        border-top: 1px solid transparent;
+    }
+    
+    > li:not(.footer) {
+        &:last-child {
+            border-bottom: none;
+        }
+        > a {
+            padding: 7px 20px;
+            font-weight: $base-font-weight;
+            > i {
+                width: 20px;
+                text-align: center;
+                margin-right: 10px;
+                display: inline-block;
+            }
+            > .badge,
+            > .label {
+                float: right;
+                font-size: 11px;
+                font-weight: $base-font-weight;
+                padding: 2px 7px;
+                margin-top: 2px;
+            }
+        }
+    }
+
+    > li.header {
+        display: block;
+        overflow: hidden;
+        padding: 7px;
+        letter-spacing: 0.5px;
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            padding: 0;
+            float: left;
+            font-size: $dropdown-header-font-size;
+            font-weight: normal;
+            display: inline-block;
+            font-family: $dropdown-header-font;
+        }
+        a {
+            display: inline-block;
+            padding: 0;
+            background: none;
+            clear: inherit;
+            font-size: $dropdown-header-font-size - 2px;
+            font-weight: 300;
+            position: absolute;
+            right: 10px;
+            border: 0;
+            margin-top: -1px;
+        }
+    }
+
+    > li.submenu {
+        position: relative;
+        > a {
+            &:after {
+                display: block;
+                content: " ";
+                float: right;
+                width: 0;
+                height: 0;
+                border-color: transparent;
+                border-style: solid;
+                border-width: 5px 0 5px 5px;
+                margin-top: 5px;
+                margin-right: -10px;
+            }
+        }
+
+        > .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+        &:hover > .dropdown-menu {
+            display: block;
+        }
+
+        &.pull-left {
+            float: none;
+            > .dropdown-menu {
+                left: -100%;
+                margin-left: 10px;
+
+            }
+        }
+
+        &.submenu-left {
+            > .dropdown-menu {
+                left: -100%;
+                right: 100%;
+            }
+        }
+    }
+
+    > li.footer {
+        border-top: 1px solid transparent;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        a {
+            display: table-cell;
+            width: 2%; // http://stackoverflow.com/questions/10525744/css-table-cell-equal-width
+            text-align: center;
+            font-size: $dropdown-footer-font-size;
+            padding: 3px;
+        }
+        a + a {
+            border-left: 1px solid transparent;
+        }
+    }
+}

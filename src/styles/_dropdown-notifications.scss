@@ -1,0 +1,30 @@
+
+.dropdown-notifications {
+    > li:not(.header):not(.footer) {
+        a {
+            padding: 10px 15px;
+            width: 100%;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .ico {
+            float: left;
+            text-align: center;
+            width: 35px;
+            font-size: 20px;
+            padding: 5px 0;
+        }
+        .details {
+            margin-left: 50px;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+        .details .time {
+            display: block;
+            font-size: 11px;
+        }
+        @include clearfix;
+    }
+
+}

@@ -1,0 +1,203 @@
+include _base
+mixin demo-dropdown-buttons(size)
+    - size = size || 'sm';
+    // TASKS
+    .btn-group(class='btn-group-' + size)
+        button.btn.blue.dropdown-toggle(type='button', data-toggle='dropdown', aria-expanded='false')
+            | Tasks Wide&nbsp;
+            span.caret
+        ul(role="menu").dropdown-menu.dropdown-wide.dropdown-task-list
+            li.header
+                h3
+                    | You have
+                    strong &nbsp;3 new&nbsp;
+                    | tasks
+            +dropdown-task("Update progress", 30).progress-bar-warning
+            +dropdown-task("User migration", 65).progress-bar-primary
+            +dropdown-task("Important process", 40).progress-bar-info
+            +dropdown-task("New stuff", 85).progress-bar-danger
+            +dropdown-task("My progress", 20).progress-bar-primary
+            li.footer
+                a(href='#') View all
+                a(href='#') Cancel all
+                a(href='#') More
+    // TASKS INVERSE
+    .btn-group(class='btn-group-' + size)
+        button.btn.blue-dark.dropdown-toggle(type='button', data-toggle='dropdown', aria-expanded='false')
+            | Tasks Inverse&nbsp;
+            span.caret
+        ul(role="menu").dropdown-menu.dropdown-menu-inverse.dropdown-task-list
+            li.header
+                h3
+                    | You have
+                    strong &nbsp;3 new&nbsp;
+                    | tasks
+            +dropdown-task("Update progress", 30).progress-bar-warning
+            +dropdown-task("User migration", 65).progress-bar-primary
+            +dropdown-task("Important process and other stuff", 40).progress-bar-info
+            +dropdown-task("New stuff", 85).progress-bar-danger
+            +dropdown-task("My progress", 20).progress-bar-primary
+            li.footer
+                a(href='#') View all
+                a(href='#') Cancel all
+                a(href='#') More
+    // DROPDOWN
+    .btn-group(class='btn-group-' + size)
+        button.btn.cyan-dark.dropdown-toggle(type='button', data-toggle='dropdown', aria-expanded='false')
+            | Dropdown&nbsp;
+            span.caret
+        ul.dropdown-menu.pull-right(role='menu')
+            +lia First
+            +lia Later
+            +lia Faster
+            +lia Mister
+            +lia Alea
+    // DROPDOWN (header + submenus)
+    .btn-group(class='btn-group-' + size)
+        button.btn.blue-grey.dropdown-toggle(type='button', data-toggle='dropdown', aria-expanded='false')
+            | Advanced Dropdown&nbsp;
+            span.caret
+        +demo-dropdown-w-header-submenu
+    // DROPDOWN inverse (header + submenus)
+    .btn-group(class='btn-group-' + size)
+        button.btn.green-dark.dropdown-toggle(type='button', data-toggle='dropdown', aria-expanded='false')
+            | Advanced Dropdown Inverse&nbsp;
+            span.caret
+        +demo-dropdown-w-header-submenu.dropdown-menu-inverse
+
+mixin demo-dropdown-basic-items
+    +lia First
+    +lia Later
+    +lia Faster
+    +lia Mister
+    +lia Alea
+    block
+
+mixin demo-dropdown-advanced-items
+    li.header
+        h3 Options
+    +lia
+        i.fa.fa-user
+        | First
+        span.badge 13
+    +lia
+        i.fa.fa-cog
+        | Later
+        span.badge 2
+    li.submenu
+        a(href="#")
+            i
+            | Submenu 1
+        ul.dropdown-menu
+            li.header
+                h3 Submenu 1
+            +lia First
+            +lia Later
+            li.submenu
+                a(href="#") Submenu 1.1
+                ul.dropdown-menu
+                    +lia First
+                    +lia Later
+                    li.footer
+                        a(href='#') View
+                        a(href='#') Cancel
+            +lia Last
+    li.header
+        h3 Extras
+    +lia
+        i.fa.fa-user
+        | Mister
+        span.label.label-danger err
+    +lia
+        i.fa.fa-list
+        | Alea
+        span.label.label-success valid
+    li.submenu
+        a(href="#")
+            i.fa.fa-puzzle-piece
+            | Submenu 2
+        ul.dropdown-menu
+            li.header
+                h3 Submenu 2
+            +lia First
+            +lia Later
+            li.submenu
+                a(href="#") Submenu 2.2
+                ul.dropdown-menu
+                    +lia First
+                    +lia Later
+            +lia Last
+    +lia
+        i.fa.fa-bolt
+        | Events
+        span.badge 3
+    li.footer
+        a(href='#') View all
+
+
+doctype html
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html lang="en" class="ie9"><![endif]-->
+<!--[if !IE]><!-->
+html(lang="en")
+    <!--<![endif]-->
+    head
+        block head
+            title
+                block title
+                    | Hai
+            block meta
+                meta(charset="UTF-8")
+                meta(http-equiv="X-UA-Compatible", content="IE=edge")
+            block styles
+                link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', type="text/css", rel="stylesheet")
+                link(href="css/demo.css", type="text/css", rel="stylesheet")
+                link(href="css/bootstrap-advanced-dropdown.css", type="text/css", rel="stylesheet")
+                link(href="css/themes/dropdown-theme-default.css", type="text/css", rel="stylesheet")
+    body
+
+
+        .container
+            .row
+                .col-xs-12
+                    h1 Bootstrap advanced dropdowns
+                    h4.mt-lg Basic
+                    .btn-toolbar
+                        +demo-dropdown-button('Basic dropdown')
+                            +demo-dropdown-basic-items
+                        +demo-dropdown-button('Basic dropdown wide').dropdown-wide
+                            +demo-dropdown-basic-items
+                        +demo-dropdown-button('Basic dropdown inverse').dropdown-menu-inverse
+                            +demo-dropdown-basic-items
+                        +demo-dropdown-button('Basic dropdown inverse wide').dropdown-menu-inverse.dropdown-wide
+                            +demo-dropdown-basic-items
+                    h4.mt-lg Advanced
+                    .btn-toolbar
+                        +demo-dropdown-button('Advanced dropdown')
+                            +demo-dropdown-advanced-items
+                        +demo-dropdown-button('Advanced dropdown wide').dropdown-menu-wide
+                            +demo-dropdown-advanced-items
+                        +demo-dropdown-button('Advanced dropdown inverse').dropdown-menu-inverse
+                            +demo-dropdown-advanced-items
+                        +demo-dropdown-button('Advanced dropdown inverse wide').dropdown-menu-inverse.dropdown-menu-wide
+                            +demo-dropdown-advanced-items
+                    h4.mt-lg
+                        | Scrollable
+                        small  with jQuery SlimScroll
+                    .btn-toolbar
+                        - var scrollHeight = '100';
+                        +demo-dropdown-button('Scrollable dropdown')
+                            +demo-dropdown-basic-items
+                            ul.scrollable(data-height=scrollHeight)
+                                +demo-dropdown-basic-items
+                            +demo-dropdown-basic-items
+        script(src="plugins/jquery/dist/jquery.min.js")
+        script(src="plugins/jquery-slimscroll/jquery.slimscroll.min.js")
+        script(src="plugins/bootstrap-sass-official/assets/javascripts/bootstrap.min.js")
+        script.
+            $(function() {
+                console.log('initing');
+                $('.dropdown-menu-scrollable').slimScroll({
+
+                });
+            });

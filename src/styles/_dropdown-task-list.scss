@@ -1,0 +1,44 @@
+
+.dropdown-task-list {
+    > li.header + li:not(.header) {
+        margin-top: 0 !important;
+    }
+    > li:not(.header) + li.header {
+        margin-top: 0 !important;
+    }
+    > li:not(.header):not(.footer) {
+        a {
+            display: block;
+            padding: 5px 15px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .task {
+            font-size: $dropdown-tasklist-task-font-size;
+            padding: 5px 0 10px 0;
+            height: 20px;
+            > span:first-child {
+                float: left;
+                display: block;
+                overflow: hidden;
+                width: 80%;
+            }
+            > span:last-child {
+                float: right;
+                display: block;
+            }
+        }
+        .progress {
+            clear: left;
+            margin: 10px 0;
+            height: 8px;
+            border-radius: 0;
+            box-shadow: none;
+
+            .progress-bar {
+                box-shadow: none;
+            }
+        }
+    }
+}

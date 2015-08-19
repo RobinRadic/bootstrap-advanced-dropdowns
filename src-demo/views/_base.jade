@@ -1,0 +1,42 @@
+//-
+    jade-bootstrap
+    https://github.com/metalshark/jade-bootstrap
+    Copyright (c) 2013 'Metalshark' Beech Horn
+    Licensed under the LGPL v3 license.
+//- Brings all of the mixin includes together into one file with their helpers
+//- Imports
+include ../../node_modules/jade-bootstrap/mixins/buttons
+include ../../node_modules/jade-bootstrap/mixins/carousel
+include ../../node_modules/jade-bootstrap/mixins/code
+include ../../node_modules/jade-bootstrap/mixins/containers
+include ../../node_modules/jade-bootstrap/mixins/doctypes
+include ../../node_modules/jade-bootstrap/mixins/forms
+include ../../node_modules/jade-bootstrap/mixins/grid-system
+include ../../node_modules/jade-bootstrap/mixins/helper-classes
+include ../../node_modules/jade-bootstrap/mixins/images
+include ../../node_modules/jade-bootstrap/mixins/navbar
+include ../../node_modules/jade-bootstrap/mixins/navs
+include ../../node_modules/jade-bootstrap/mixins/responsive-images
+include ../../node_modules/jade-bootstrap/mixins/responsive-utilities
+include ../../node_modules/jade-bootstrap/mixins/tables
+include ../../node_modules/jade-bootstrap/mixins/viewports
+//- Helpers
+- function _addClass(classes, attributes) {
+-     attributes.class = (attributes.class === undefined) ? classes : attributes.class + ' ' + classes
+-}
+- function _addClassAttribute(name, classes, attributes) {
+-     if (attributes[name]) {
+-         _addClass(classes, attributes)
+-         attributes[name] = null
+-     }
+- }
+- function _unlessClassAttribute(name, classes, attributes) {
+-     if (attributes[name]) {
+-         attributes[name] = null
+-     } else {
+-         _addClass(classes, attributes)
+-     }
+- }
+include vendor/_typography
+include _mixins
+
