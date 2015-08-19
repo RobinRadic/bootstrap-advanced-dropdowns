@@ -9,12 +9,16 @@ module.exports = function (grunt) {
 
     var config = {
         clean: {
-            all: {src: ['demo', 'build', 'dist']},
+            all        : {src: ['demo', 'build', 'dist']},
             demo       : {src: 'demo'},
             demo_styles: {src: 'demo/css'},
             demo_views : {src: 'demo/**/*.html'},
-            build: {src: 'build'},
-            dist: {src: 'dist'}
+            build      : {src: 'build'},
+            dist       : {src: 'dist'}
+        },
+        copy: {
+            bower: {  files: [{expand: true, cwd: 'bower_components', src: '**/*', dest: 'demo/plugins'}] }
+
         },
         jade : {
             options: {pretty: true,},
@@ -60,17 +64,6 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt);
     grunt.initConfig(config);
 
-    grunt.registerTask('link-bower', function () {
-        var dest = grunt.config.get('target.dest');
-        var dir = path.join('demo/plugins');
-        try {
-            fs.unlinkSync(dir);
-        } catch (e) {
-            grunt.log.writeln('No old plugins dir found. Sym linking bower.');
-        }
-        fs.symlinkSync('../bower_components', dir, 'dir');
-        grunt.log.writeln('Success');
-    });
-    grunt.registerTask('demo', ['clean:demo', 'sass:demo', 'jade:demo', 'link-bower']);
+    grunt.registerTask('demo', ['clean:demo', 'sass:demo', 'jade:demo', 'copy:bower']);
     grunt.registerTask('build', ['clean:all', 'demo', 'sass:build', 'sass:dist']);
 };

@@ -1,19 +1,14 @@
-/**
- * Retrieves a color value from the $material-colors Sass map
- * Inspired by https://github.com/nilskaspersson/Google-Material-UI-Color-Palette/
- *
- * @function
- * @param {string} color-name             - quoted, lower-case, dasherized color
- *                                          name (e.g. 'pink', 'amber')
- * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
- *                                          '200', 'a100')
- */
 .dropdown-menu {
   background: #fff;
   -webkit-box-shadow: 5px 5px rgba(34, 34, 34, 0.2);
   box-shadow: 5px 5px rgba(34, 34, 34, 0.2); }
   .dropdown-menu li:not(.header) + li:not(.header) {
     border-top-color: 1px solid transparent; }
+  .dropdown-menu > li:not(.footer) > a {
+    font-weight: 300; }
+    .dropdown-menu > li:not(.footer) > a > .badge,
+    .dropdown-menu > li:not(.footer) > a > .label {
+      font-weight: 300; }
   .dropdown-menu > li:not(.header):not(.footer) > a {
     color: #888888; }
     .dropdown-menu > li:not(.header):not(.footer) > a:hover {
@@ -44,83 +39,100 @@
 .dropdown-menu-inverse,
 .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu),
 .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu),
-.dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu {
+.dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu,
+.dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu {
   background: #333333;
   -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2); }
   .dropdown-menu-inverse li:not(.header) + li:not(.header),
   .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) li:not(.header) + li:not(.header),
   .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) li:not(.header) + li:not(.header),
-  .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu li:not(.header) + li:not(.header) {
+  .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu li:not(.header) + li:not(.header), .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu li:not(.header) + li:not(.header),
+  .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu li:not(.header) + li:not(.header) {
     border-top-color: #484848 !important; }
   .dropdown-menu-inverse > li:not(.header):not(.footer) > a,
   .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li:not(.header):not(.footer) > a,
   .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li:not(.header):not(.footer) > a,
-  .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li:not(.header):not(.footer) > a {
+  .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li:not(.header):not(.footer) > a, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li:not(.header):not(.footer) > a,
+  .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li:not(.header):not(.footer) > a {
     color: #888888; }
     .dropdown-menu-inverse > li:not(.header):not(.footer) > a:hover,
     .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li:not(.header):not(.footer) > a:hover,
     .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li:not(.header):not(.footer) > a:hover,
-    .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li:not(.header):not(.footer) > a:hover {
+    .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li:not(.header):not(.footer) > a:hover, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li:not(.header):not(.footer) > a:hover,
+    .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li:not(.header):not(.footer) > a:hover {
       background: #222222;
       color: #888888; }
   .dropdown-menu-inverse > li.header,
   .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header,
   .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.header,
-  .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header {
+  .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header,
+  .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header {
     background: #454545; }
     .dropdown-menu-inverse > li.header h1,
-    .dropdown-menu-inverse > li.header h2,
-    .dropdown-menu-inverse > li.header h3,
-    .dropdown-menu-inverse > li.header h4,
-    .dropdown-menu-inverse > li.header h5,
-    .dropdown-menu-inverse > li.header h6,
     .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header h1,
-    .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header h2,
-    .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header h3,
-    .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header h4,
-    .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header h5,
-    .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header h6,
     .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.header h1,
+    .dropdown-menu-inverse > li.header h2,
+    .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header h2,
     .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.header h2,
+    .dropdown-menu-inverse > li.header h3,
+    .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header h3,
     .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.header h3,
+    .dropdown-menu-inverse > li.header h4,
+    .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header h4,
     .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.header h4,
+    .dropdown-menu-inverse > li.header h5,
+    .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header h5,
     .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.header h5,
+    .dropdown-menu-inverse > li.header h6,
+    .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header h6,
     .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.header h6,
-    .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h1, .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h2, .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h3, .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h4, .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h5, .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h6 {
+    .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h1, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h1,
+    .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h1, .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h2, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h2,
+    .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h2, .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h3, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h3,
+    .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h3, .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h4, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h4,
+    .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h4, .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h5, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h5,
+    .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h5, .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header h6, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h6,
+    .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header h6 {
       color: #b3b3b3; }
     .dropdown-menu-inverse > li.header a,
     .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header a,
     .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.header a,
-    .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header a {
+    .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header a, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header a,
+    .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header a {
       color: #000000; }
       .dropdown-menu-inverse > li.header a:hover,
       .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header a:hover,
       .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.header a:hover,
-      .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header a:hover {
+      .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.header a:hover, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header a:hover,
+      .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.header a:hover {
         color: #333333; }
   .dropdown-menu-inverse > li.submenu > a:after,
   .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.submenu > a:after,
   .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.submenu > a:after,
-  .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.submenu > a:after {
+  .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.submenu > a:after, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.submenu > a:after,
+  .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.submenu > a:after {
     border-left-color: #cccccc; }
   .dropdown-menu-inverse > li.footer a,
   .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.footer a,
   .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.footer a,
-  .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.footer a {
+  .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.footer a, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.footer a,
+  .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.footer a {
     border-top-color: #525252;
     background: #454545;
     color: #888888; }
     .dropdown-menu-inverse > li.footer a:hover,
     .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.footer a:hover,
     .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.footer a:hover,
-    .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.footer a:hover {
+    .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.footer a:hover, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.footer a:hover,
+    .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.footer a:hover {
       background: #525252;
       color: #888888; }
     .dropdown-menu-inverse > li.footer a + a,
     .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.footer a + a,
     .dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li.footer a + a,
-    .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.footer a + a {
+    .dropdown-menu.dropdown-menu-inverse li.submenu > .dropdown-menu > li.footer a + a, .dropdown-menu-inverse ul.dropdown-menu[class^="dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.footer a + a,
+    .dropdown-menu-inverse ul.dropdown-menu[class*=" dropdown-"].scrollable:not(.dropdown-menu) li.submenu > .dropdown-menu > li.footer a + a {
       border-left-color: #525252; }
 
 .dropdown-task-list > li:not(.header) + li:not(.header) {
@@ -133,15 +145,24 @@
   background: #dfdfdf; }
 
 .dropdown-task-list.dropdown-menu-inverse > li:not(.header) + li:not(.header),
-.dropdown-menu-inverse .dropdown-task-list > li:not(.header) + li:not(.header) {
+.dropdown-menu-inverse ul.dropdown-task-list[class^="dropdown-"].scrollable:not(.dropdown-menu) > li:not(.header) + li:not(.header),
+.dropdown-menu-inverse ul.dropdown-task-list[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li:not(.header) + li:not(.header),
+.dropdown-menu-inverse .dropdown-task-list > li:not(.header) + li:not(.header), .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) .dropdown-task-list > li:not(.header) + li:not(.header),
+.dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) .dropdown-task-list > li:not(.header) + li:not(.header) {
   border-top-color: #484848 !important; }
 
 .dropdown-task-list.dropdown-menu-inverse > li:not(.header) .task,
-.dropdown-menu-inverse .dropdown-task-list > li:not(.header) .task {
+.dropdown-menu-inverse ul.dropdown-task-list[class^="dropdown-"].scrollable:not(.dropdown-menu) > li:not(.header) .task,
+.dropdown-menu-inverse ul.dropdown-task-list[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li:not(.header) .task,
+.dropdown-menu-inverse .dropdown-task-list > li:not(.header) .task, .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) .dropdown-task-list > li:not(.header) .task,
+.dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) .dropdown-task-list > li:not(.header) .task {
   color: #b3b3b3; }
 
 .dropdown-task-list.dropdown-menu-inverse > li:not(.header) .progress,
-.dropdown-menu-inverse .dropdown-task-list > li:not(.header) .progress {
+.dropdown-menu-inverse ul.dropdown-task-list[class^="dropdown-"].scrollable:not(.dropdown-menu) > li:not(.header) .progress,
+.dropdown-menu-inverse ul.dropdown-task-list[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li:not(.header) .progress,
+.dropdown-menu-inverse .dropdown-task-list > li:not(.header) .progress, .dropdown-menu-inverse ul[class^="dropdown-"].scrollable:not(.dropdown-menu) .dropdown-task-list > li:not(.header) .progress,
+.dropdown-menu-inverse ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) .dropdown-task-list > li:not(.header) .progress {
   background: #c8c8c8; }
 
 .dropdown-notifications > li:not(.header) + li:not(.header) {
@@ -150,8 +171,12 @@
     color: #ffffff; }
 
 .dropdown-notifications.dropdown-menu-inverse li:not(.header) + li:not(.header),
+.dropdown-menu-inverse ul.dropdown-notifications[class^="dropdown-"].scrollable:not(.dropdown-menu) li:not(.header) + li:not(.header),
+.dropdown-menu-inverse ul.dropdown-notifications[class*=" dropdown-"].scrollable:not(.dropdown-menu) li:not(.header) + li:not(.header),
 .dropdown-menu-inverse .dropdown-notifications li:not(.header) + li:not(.header) {
   border-top-color: #484848 !important; }
   .dropdown-notifications.dropdown-menu-inverse li:not(.header) + li:not(.header) > a > .ico > i.fa,
+  .dropdown-menu-inverse ul.dropdown-notifications[class^="dropdown-"].scrollable:not(.dropdown-menu) li:not(.header) + li:not(.header) > a > .ico > i.fa,
+  .dropdown-menu-inverse ul.dropdown-notifications[class*=" dropdown-"].scrollable:not(.dropdown-menu) li:not(.header) + li:not(.header) > a > .ico > i.fa,
   .dropdown-menu-inverse .dropdown-notifications li:not(.header) + li:not(.header) > a > .ico > i.fa {
     color: #d8d1d1; }

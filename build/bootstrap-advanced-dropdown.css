@@ -1,13 +1,3 @@
-/**
- * Retrieves a color value from the $material-colors Sass map
- * Inspired by https://github.com/nilskaspersson/Google-Material-UI-Color-Palette/
- *
- * @function
- * @param {string} color-name             - quoted, lower-case, dasherized color
- *                                          name (e.g. 'pink', 'amber')
- * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
- *                                          '200', 'a100')
- */
 .dropdown-menu, ul[class^="dropdown-"].scrollable:not(.dropdown-menu),
 ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) {
   padding: 0; }
@@ -29,8 +19,7 @@ ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) {
     border-bottom: none; }
   .dropdown-menu > li:not(.footer) > a, ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li:not(.footer) > a,
   ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li:not(.footer) > a {
-    padding: 7px 20px;
-    font-weight: 300; }
+    padding: 7px 20px; }
     .dropdown-menu > li:not(.footer) > a > i, ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li:not(.footer) > a > i,
     ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li:not(.footer) > a > i {
       width: 20px;
@@ -44,7 +33,6 @@ ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) {
     ul[class*=" dropdown-"].scrollable:not(.dropdown-menu) > li:not(.footer) > a > .label {
       float: right;
       font-size: 11px;
-      font-weight: 300;
       padding: 2px 7px;
       margin-top: 2px; }
   .dropdown-menu > li.header, ul[class^="dropdown-"].scrollable:not(.dropdown-menu) > li.header,
