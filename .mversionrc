@@ -1,6 +1,6 @@
 {
     "commitMessage": "Bumped to %s",
-    "tagName": "v%s-src",
+    "tagName": "%s",
     "scripts": {
         "preupdate": "echo 'Bumping version' && sh ./preupdate.sh",
         "postcommit": "git push && git push --tags && npm publish",
