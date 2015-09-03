@@ -6,8 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+    "homepage": "https://github.com/robinradic/bootstrap-advanced-dropdowns",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:robinradic/bootstrap-advanced-dropdowns.git"
+    },
+    "bugs": {
+        "url": "https://github.com/robinradic/bootstrap-advanced-dropdowns/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://http://radic.mit-license.org/"
+        }
+    ],
   "author": "Robin Radic",
-  "license": "MIT",
   "devDependencies": {
     "fs-extra": "^0.22.1",
     "grunt": "^0.4.5",

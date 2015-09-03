@@ -5,7 +5,20 @@
     "authors": [
         "Robin Radic <robin@radic.nl>"
     ],
-    "license": "MIT",
+    "homepage": "https://github.com/robinradic/bootstrap-advanced-dropdowns",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:robinradic/bootstrap-advanced-dropdowns.git"
+    },
+    "bugs": {
+        "url": "https://github.com/robinradic/bootstrap-advanced-dropdowns/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://http://radic.mit-license.org/"
+        }
+    ],
     "ignore": [
         "**/.*",
         "node_modules",
