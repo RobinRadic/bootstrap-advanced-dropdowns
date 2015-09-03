@@ -12,7 +12,7 @@ Improved dropdown menus for bootstrap. Highly customizable `SCSS` styles with a 
  
 Comes with several ready to use example themes. 
 
-#### [View Demo](https://github.com/robinradic/bootstrap-advanced-dropdowns)
+#### [View Demo](http://robin.radic.nl/bootstrap-advanced-dropdowns/)
 
 ### Features
 

@@ -2,7 +2,7 @@
     "commitMessage": "Bumped to %s",
     "tagName": "%s",
     "scripts": {
-        "preupdate": "echo 'Bumping version' && sh ./preupdate.sh",
+        "preupdate": "echo 'Bumping version' && sh ./run.sh preupdate",
         "postcommit": "git push && git push --tags && npm publish",
         "postupdate": "echo 'Updated to version %s in manifest files'"
     }
