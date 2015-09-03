@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-advanced-dropdowns",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Advanced bootstrap dropdowns, multi-level, scrollable, icons, badges. css/scss only",
   "main": "Gruntfile.js",
   "scripts": {
